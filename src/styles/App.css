@@ -19,8 +19,23 @@
 body {
     background-color: #ffae93;
     font-family: 'Times New Roman', serif;
+    margin: 0;
 }
 
 #app {
-    
+    height: 115vh;
+    width: 66vw;
+    margin: 0 auto;
+    padding: 2vw 3vw;
+    background-image: url('../assets/images/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#resume {
+    background-color: #f7f5f5;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 13vw auto;
 }
