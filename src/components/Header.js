@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 class Header extends Component {
     constructor() {
@@ -7,8 +9,7 @@ class Header extends Component {
             name: '',
             title: '',
             headerName: '',
-            text: '',
-            edit: false
+            text: ''
         };
     }
 
@@ -27,21 +28,21 @@ class Header extends Component {
     handleTextEdit = e => {
         this.setState({ text: e.target.value });
     }
-    
-    toggleEdit = e => {
-        this.setState(prevState => ({
-            edit: !prevState.edit
-        }));
-    }
 
     render() {
-        const { name, title, headerName, text, edit } = this.state;
+        const { name, title, headerName, text } = this.state;
 
         return (
             <div id="header">
-                <div className="user-name">
-                    <h1>{name ? name: 'Jane Doe'}</h1>
-                </div>
+                <form className="user-name">
+                    <input
+                    className="user-name-input"
+                    type="text"
+                    placeholder="Jane Doe"
+                    onChange={this.handleNameEdit}
+                    />
+                    <FontAwesomeIcon icon={solid('pen-to-square')} />
+                </form>
                 <div className="user-title">
                     <h2>{title ? title: 'Entrepreneur'}</h2>
                 </div>
