@@ -13,60 +13,22 @@ class Experience extends Component {
             stateCountry: '',
             start: '',
             end: '',
-            duties: [
-                { 
-                    dutyId: uniqid(),
-                    duty: '' 
-                }
-            ],
-            experience: [
-                {
-                    id: uniqid(),
-                    company: 'Lumon Industries',
-                    position: 'Macrodata Refiner',
-                    city: 'Kier,',
-                    stateCountry: 'NJ',
-                    start: 'Feb 2019 - ',
-                    end: 'present',
-                    duties: [
-                        { 
-                            dutyId: uniqid(),
-                            duty: 'Sort encrypted numbers into digital bins as part of very important work.' 
-                        },
-                        { 
-                            dutyId: uniqid(),
-                            duty: 'Oversee orientation of newly severed employees including a tour of the Perpetuity Wing.' 
-                        },
-                        { 
-                            dutyId: uniqid(),
-                            duty: 'Enforce strict separation of departments to prevent another Optics and Design coup.' 
-                        },
-                        { 
-                            dutyId: uniqid(),
-                            duty: 'Memorized all works of Kier.' 
-                        }
-                    ]
-                },
-                {
-                    id: uniqid(),
-                    company: 'Company/Organization',
-                    position: 'Job title',
-                    city: 'City,',
-                    stateCountry: 'ST',
-                    start: 'Start date - ',
-                    end: 'End date',
-                    duties: [
-                        { 
-                            dutyId: uniqid(),
-                            duty: 'Add descriptions of your job responsibilities, achievements, etc., here.' 
-                        },
-                        { 
-                            dutyId: uniqid(),
-                            duty: 'It\'s recommended to include 2-4 descriptions no longer than 1-2 sentences each.' 
-                        }
-                    ]
-                }
-            ]
+            duties:
+            { 
+                dutyId: uniqid(),
+                duty: '' 
+            },
+            experience:
+            {
+                id: uniqid(),
+                company: this.state.company,
+                position: this.state.position,
+                city: this.state.city,
+                stateCountry: this.state.stateCountry,
+                start: this.state.start,
+                end: this.state.end,
+                duties: this.state.duties
+            }
         };
     }
 
@@ -106,13 +68,7 @@ class Experience extends Component {
             stateCountry: '',
             start: '',
             end: '',
-            duties: 
-            [
-                {
-                    dutyId: uniqid(),
-                    duty: ''
-                }
-            ],
+            duty: '',
             experience: this.state.experience.concat({
                 id: uniqid(),
                 company: this.state.company,
@@ -121,17 +77,17 @@ class Experience extends Component {
                 stateCountry: this.state.stateCountry,
                 start: this.state.start,
                 end: this.state.end,
-                duties: this.state.duties.concat({
+                duties: this.state.experience.duties.concat({
                     dutyId: uniqid(),
                     duty: this.state.duty
-                })
+                }),
             })
         });
     }
 
     onClickDuty = () => {
         this.setState({
-            duties: this.state.duties.concat({
+            duties: this.state.experience.duties.concat({
                 dutyId: uniqid(),
                 duty: this.state.duty
             })
@@ -178,7 +134,7 @@ class Experience extends Component {
                                     <input
                                         className="company-input"
                                         type="text"
-                                        placeholder={exp.company}
+                                        placeholder={company ? }
                                     />
                                     <input
                                         className="position-input"
