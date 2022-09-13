@@ -98,6 +98,10 @@ class Experience extends Component {
         this.setState({ duty: e.target.value });
     }
 
+    handleAddExperience = () => {}
+
+    handleAddDuty = () => {}
+
     handleRemoveExperience = key => {
         const removedExp = this.state.experience.filter(exp => exp.id !== key);
         this.setState({ experience: removedExp });

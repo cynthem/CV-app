@@ -68,6 +68,14 @@ input::placeholder {
     color: black;
 }
 
+input:hover::placeholder {
+    color: #DB6B30;
+}
+
+textarea:hover {
+    color: #DB6B30;
+}
+
 .name-form,
 .title-form,
 .profile-form {
