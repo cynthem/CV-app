@@ -24,9 +24,9 @@ class Experience extends Component {
                     id: uniqid(),
                     company: 'Lumon Industries',
                     position: 'Macrodata Refiner',
-                    city: 'Kier',
+                    city: 'Kier,',
                     stateCountry: 'NJ',
-                    start: 'Feb 2019',
+                    start: 'Feb 2019 - ',
                     end: 'present',
                     duties: [
                         { 
@@ -51,18 +51,18 @@ class Experience extends Component {
                     id: uniqid(),
                     company: 'Company/Organization',
                     position: 'Job title',
-                    city: 'City',
+                    city: 'City,',
                     stateCountry: 'ST',
-                    start: 'Start date',
+                    start: 'Start date - ',
                     end: 'End date',
                     duties: [
                         { 
                             dutyId: uniqid(),
-                            duty: 'A bulleted list of a description of your responsibilities, achievements, etc.' 
+                            duty: 'Add descriptions of your job responsibilities, achievements, etc., here.' 
                         },
                         { 
                             dutyId: uniqid(),
-                            duty: 'Include 1-4 list items no longer than 1-2 sentences each.' 
+                            duty: 'It\'s recommended to include 2-4 descriptions no longer than 1-2 sentences each.' 
                         }
                     ]
                 }
@@ -135,7 +135,7 @@ class Experience extends Component {
                 dutyId: uniqid(),
                 duty: this.state.duty
             })
-        })
+        });
     }
 
     handleRemoveExperience = key => {
@@ -168,79 +168,54 @@ class Experience extends Component {
                 {experience.map(exp => {
                     return (
                         <div className="experience-item" key={exp.id}>
+                            <FontAwesomeIcon 
+                                icon={solid('trash-can')}
+                                className="big-trash-icon"
+                                onClick={this.handleRemoveExperience}
+                            />
                             <div className="experience-top">
                                 <div className="experience-left">
-                                    <form className="company-form">
-                                        <FontAwesomeIcon 
-                                            icon={solid('pen-to-square')}
-                                            className="edit-icon"
-                                        />
-                                        <input
-                                            className="company-input"
-                                            type="text"
-                                            placeholder={exp.company}
-                                        />
-                                    </form>
-                                    <form className="position-form">
-                                        <FontAwesomeIcon 
-                                            icon={solid('pen-to-square')}
-                                            className="edit-icon"
-                                        />
-                                        <input
-                                            className="position-input"
-                                            type="text"
-                                            placeholder={exp.position}
-                                        />
-                                    </form>
+                                    <input
+                                        className="company-input"
+                                        type="text"
+                                        placeholder={exp.company}
+                                    />
+                                    <input
+                                        className="position-input"
+                                        type="text"
+                                        placeholder={exp.position}
+                                    />
                                 </div>
-
                                 <div className="experience-right">
                                     <div className="experience-location">
-                                        <FontAwesomeIcon 
-                                            icon={solid('pen-to-square')}
-                                            className="edit-icon"
+                                        <input
+                                            className="city-input"
+                                            type="text"
+                                            placeholder={exp.city}
                                         />
-                                        <form className="city-form">
-                                            <input
-                                                className="city-input"
-                                                type="text"
-                                                placeholder={exp.city}
-                                            />
-                                        </form>
-                                        <form className="state-form">
-                                            <input
-                                                className="state-input"
-                                                type="text"
-                                                placeholder={exp.stateCountry}
-                                            />
-                                        </form>
+                                        <input
+                                            className="state-input"
+                                            type="text"
+                                            placeholder={exp.stateCountry}
+                                        />
                                     </div>
                                     <div className="experience-dates">
-                                        <FontAwesomeIcon 
-                                            icon={solid('pen-to-square')}
-                                            className="edit-icon"
+                                        <input
+                                            className="start-input"
+                                            type="text"
+                                            placeholder={exp.start}
                                         />
-                                        <form className="start-form">
-                                            <input
-                                                className="start-input"
-                                                type="text"
-                                                placeholder={exp.start}
-                                            />
-                                        </form>
-                                        <form className="end-form">
-                                            <input
-                                                className="end-input"
-                                                type="text"
-                                                placeholder={exp.end}
-                                            />
-                                        </form>
+                                        <input
+                                            className="end-input"
+                                            type="text"
+                                            placeholder={exp.end}
+                                        />
                                     </div>
                                 </div>
                             </div>
-
-                            {experience.duties.map(item => {
-                                return (
-                                    <div className="experience-duties">
+                            <div className="experience-bottom">
+                                {experience.duties.map(item => {
+                                    return (
                                         <form className="duty-form" key={item.dutyId}>
                                             <FontAwesomeIcon 
                                                 icon={solid('circle')}
@@ -254,67 +229,24 @@ class Experience extends Component {
                                             <FontAwesomeIcon 
                                                 icon={solid('trash-can')}
                                                 className="trash-icon"
+                                                onClick={this.handleRemoveDuty}
                                             />
                                         </form>
-                                        <form className="duty-form" key={item.dutyId}>
-                                            <FontAwesomeIcon 
-                                                icon={solid('circle')}
-                                                className="circle-icon"
-                                            />
-                                            <input
-                                                className="duty-item"
-                                                type="text"
-                                                placeholder={duties.duty}
-                                            />
-                                            <FontAwesomeIcon 
-                                                icon={solid('trash-can')}
-                                                className="trash-icon"
-                                            />
-                                        </form>
-                                        <form className="duty-form" key={item.dutyId}>
-                                            <FontAwesomeIcon 
-                                                icon={solid('circle')}
-                                                className="circle-icon"
-                                            />
-                                            <input
-                                                className="duty-item"
-                                                type="text"
-                                                placeholder={duties.duty}
-                                            />
-                                            <FontAwesomeIcon 
-                                                icon={solid('trash-can')}
-                                                className="trash-icon"
-                                            />
-                                        </form>
-                                        <form className="duty-form" key={item.dutyId}>
-                                            <FontAwesomeIcon 
-                                                icon={solid('circle')}
-                                                className="circle-icon"
-                                            />
-                                            <input
-                                                className="duty-item"
-                                                type="text"
-                                                placeholder={duties.duty}
-                                            />
-                                            <FontAwesomeIcon 
-                                                icon={solid('trash-can')}
-                                                className="trash-icon"
-                                            />
-                                        </form>
-                                        <FontAwesomeIcon 
-                                            icon={solid('plus')}
-                                            className="add-icon"
-                                        />
-                                    </div>
-                                )
-                            })}
+                                    )
+                                })}
+                                <FontAwesomeIcon 
+                                    icon={solid('plus')}
+                                    className="add-icon"
+                                    onClick={this.onClickDuty}
+                                />
+                            </div>
                         </div>
                     )
                 })}
-
                 <FontAwesomeIcon 
                     icon={solid('plus')}
                     className="big-add-icon"
+                    onClick={this.onClickExperience}
                 />
             </div>
         )
