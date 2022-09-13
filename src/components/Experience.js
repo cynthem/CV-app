@@ -149,9 +149,7 @@ class Experience extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="experience-bottom">
-                                <Duties />
-                            </div>
+                            <Duties />
                         </div>
                     )
                 })}
