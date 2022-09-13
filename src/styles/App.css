@@ -42,6 +42,17 @@ body {
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
+h2 {
+    border-top: 1px solid #DB6B30;
+    border-bottom: 2px solid #DB6B30;
+    margin: 0;
+    text-align: center;
+    padding: 3px 0 5px;
+    font-family: 'Abril Fatface', 'Times New Roman', serif;
+    letter-spacing: 0.05rem;
+    color: #DB6B30;
+    font-size: 1.35rem;
+}
 
 /* SIDE PANEL */
 
@@ -62,7 +73,7 @@ main {
 /* HEADER */
 
 #header {
-    min-height: 200px;
+    min-height: 226px;
 }
 
 input::placeholder {
