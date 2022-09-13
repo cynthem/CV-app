@@ -133,7 +133,6 @@ textarea:focus {
 
 #experience {
     min-height: 700px;
-    overflow: hidden;
 }
 
 .experience-container {
@@ -161,6 +160,18 @@ textarea:focus {
 .experience-left {
     display: flex;
     flex-direction: column;
+    width: 50%;
+}
+
+.company-input {
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', serif;
+    font-weight: 600;
+}
+
+.position-input {
+    font-family: 'Times New Roman', serif;
+    font-size: 1rem;
 }
 
 .experience-right {
@@ -170,6 +181,20 @@ textarea:focus {
 
 .experience-location {
     display: flex;
+}
+
+.city-input,
+.state-input,
+.start-input,
+.end-input {
+    font-family: 'Times New Roman', serif;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.city-input,
+.start-input {
+    text-align: right;
 }
 
 .experience-dates {
@@ -194,6 +219,10 @@ textarea:focus {
 
 .circle-icon {
     font-size: 0.5rem;
+}
+
+.duty-input {
+    width: 90%;
 }
 
 .trash-icon {
