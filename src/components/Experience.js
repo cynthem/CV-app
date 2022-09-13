@@ -96,51 +96,49 @@ class Experience extends Component {
                             />
                             <div className="experience-details">
                                 <div className="experience-top">
-                                    <div className="experience-left">
+                                    <input
+                                        className="company-input"
+                                        type="text"
+                                        placeholder={company ? company : "Company/Organization"}
+                                        onChange={this.handleCompanyEdit}
+                                    />
+                                    <div className="experience-location">
                                         <input
-                                            className="company-input"
+                                            className="city-input"
                                             type="text"
-                                            placeholder={company ? company : "Company/Organization"}
-                                            onChange={this.handleCompanyEdit}
+                                            placeholder={city ? city : "City"}
+                                            onChange={this.handleCityEdit}
                                         />
+                                        <p className="city-comma">, </p>
                                         <input
-                                            className="position-input"
+                                            className="state-input"
                                             type="text"
-                                            placeholder={position ? position : "Job Title"}
-                                            onChange={this.handlePositionEdit}
+                                            placeholder={location ? location : "ST"}
+                                            onChange={this.handleLocationEdit}
                                         />
                                     </div>
-                                    <div className="experience-right">
-                                        <div className="experience-location">
-                                            <input
-                                                className="city-input"
-                                                type="text"
-                                                placeholder={city ? city : "City"}
-                                                onChange={this.handleCityEdit}
-                                            />
-                                            <p className="city-comma">, </p>
-                                            <input
-                                                className="state-input"
-                                                type="text"
-                                                placeholder={location ? location : "ST"}
-                                                onChange={this.handleLocationEdit}
-                                            />
-                                        </div>
-                                        <div className="experience-dates">
-                                            <input
-                                                className="start-input"
-                                                type="text"
-                                                placeholder={start ? start : "Start date"}
-                                                onChange={this.handleStartEdit}
-                                            />
-                                            <p className="date-divider"> - </p>
-                                            <input
-                                                className="end-input"
-                                                type="text"
-                                                placeholder={end ? end : "End date"}
-                                                onChange={this.handleEndEdit}
-                                            />
-                                        </div>
+                                </div>
+                                <div className="experience-middle">
+                                    <input
+                                        className="position-input"
+                                        type="text"
+                                        placeholder={position ? position : "Job Title"}
+                                        onChange={this.handlePositionEdit}
+                                    />   
+                                    <div className="experience-dates">
+                                        <input
+                                            className="start-input"
+                                            type="text"
+                                            placeholder={start ? start : "Start date"}
+                                            onChange={this.handleStartEdit}
+                                        />
+                                        <p className="date-divider"> - </p>
+                                        <input
+                                            className="end-input"
+                                            type="text"
+                                            placeholder={end ? end : "End date"}
+                                            onChange={this.handleEndEdit}
+                                        />
                                     </div>
                                 </div>
                                 <Duties />

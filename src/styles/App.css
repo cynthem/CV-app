@@ -152,31 +152,16 @@ textarea:focus {
     width: 100%;
 }
 
-.experience-top {
+.experience-top,
+.experience-middle {
     display: flex;
     justify-content: space-between;
-}
-
-.experience-left {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
 }
 
 .company-input {
     font-size: 1.2rem;
     font-family: 'Times New Roman', serif;
     font-weight: 600;
-}
-
-.position-input {
-    font-family: 'Times New Roman', serif;
-    font-size: 1rem;
-}
-
-.experience-right {
-    display: flex;
-    flex-direction: column;
 }
 
 .experience-location {
@@ -195,6 +180,11 @@ textarea:focus {
 .city-input,
 .start-input {
     text-align: right;
+}
+
+.position-input {
+    font-family: 'Times New Roman', serif;
+    font-size: 1rem;
 }
 
 .experience-dates {
