@@ -20,6 +20,7 @@ body {
     background-color: #ffae93;
     font-family: 'Times New Roman', serif;
     margin: 0;
+    cursor: default;
 }
 
 #app {
@@ -84,6 +85,7 @@ textarea:hover {
     border: none;
     outline: none;
     background-color: #f7f5f5;
+    cursor: text;
 }
 
 .name-input {
