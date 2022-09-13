@@ -62,7 +62,7 @@ main {
 /* HEADER */
 
 #header {
-    min-height: 240px;
+    min-height: 200px;
 }
 
 input::placeholder {
@@ -73,8 +73,16 @@ input:hover::placeholder {
     color: #DB6B30;
 }
 
+input:focus::placeholder {
+    background-color: white;
+}
+
 textarea:hover {
     color: #DB6B30;
+}
+
+textarea:focus {
+    background-color: white;
 }
 
 .name-input,

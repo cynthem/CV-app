@@ -14,21 +14,25 @@ class Experience extends Component {
             start: '',
             end: '',
             duty: '',
-            experience:
-            {
-                id: uniqid(),
-                company: this.state.company,
-                position: this.state.position,
-                city: this.state.city,
-                stateCountry: this.state.stateCountry,
-                start: this.state.start,
-                end: this.state.end,
-                duties: 
+            experience: 
+            [
                 {
-                    dutyId: uniqid(),
-                    duty: this.state.duty 
+                    id: uniqid(),
+                    company: '',
+                    position: '',
+                    city: '',
+                    stateCountry: '',
+                    start: '',
+                    end: '',
+                    duties: 
+                    [
+                        {
+                            dutyId: uniqid(),
+                            duty: ''
+                        }
+                    ]
                 }
-            }
+            ]
         };
     }
 
@@ -62,13 +66,6 @@ class Experience extends Component {
 
     onClickExperience = () => {
         this.setState({
-            company: '',
-            position: '',
-            city: '',
-            stateCountry: '',
-            start: '',
-            end: '',
-            duty: '',
             experience: this.state.experience.concat({
                 id: uniqid(),
                 company: this.state.company,
@@ -81,7 +78,14 @@ class Experience extends Component {
                     dutyId: uniqid(),
                     duty: this.state.duty
                 }),
-            })
+            }),
+            company: '',
+            position: '',
+            city: '',
+            stateCountry: '',
+            start: '',
+            end: '',
+            duty: ''
         });
     }
 
@@ -128,7 +132,7 @@ class Experience extends Component {
                             <FontAwesomeIcon 
                                 icon={solid('trash-can')}
                                 className="big-trash-icon"
-                                onClick={this.handleRemoveExperience}
+                                onClick={this.handleRemoveExperience(exp.id)}
                             />
                             <div className="experience-top">
                                 <div className="experience-left">
@@ -179,25 +183,25 @@ class Experience extends Component {
                                 </div>
                             </div>
                             <div className="experience-bottom">
-                                {duties.map(item => {
+                                {duties?.map(item => {
                                     return (
-                                        <form className="duty-form" key={item.dutyId}>
+                                        <div className="duty-form" key={item.dutyId}>
                                             <FontAwesomeIcon 
                                                 icon={solid('circle')}
                                                 className="circle-icon"
                                             />
                                             <textarea
                                                 className="duty-input"
+                                                value={duty ? duty : "Add descriptions of your job responsibilities, achievements, etc., here. It's recommended to include 2-4 bullet points of 1-2 sentences each."}
                                                 onChange={this.handleDutyEdit}
                                             >
-                                                {duty ? duty : "Add descriptions of your job responsibilities, achievements, etc., here. It's recommended to include 2-4 bullet points of 1-2 sentences each."}
                                             </textarea>
                                             <FontAwesomeIcon 
                                                 icon={solid('trash-can')}
                                                 className="trash-icon"
-                                                onClick={this.handleRemoveDuty}
+                                                onClick={this.handleRemoveDuty(item.dutyId)}
                                             />
-                                        </form>
+                                        </div>
                                     )
                                 })}
                                 <FontAwesomeIcon 
