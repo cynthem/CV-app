@@ -47,6 +47,33 @@ class Experience extends Component {
         };
     }
 
+    handleCompanyEdit = e => {
+        this.setState({ company: e.target.value });
+    }
+    handlePositionEdit = e => {
+        this.setState({ position: e.target.value });
+    }
+    handleCityEdit = e => {
+        this.setState({ city: e.target.value });
+    }
+    handleStateEdit = e => {
+        this.setState({ state: e.target.value });
+    }
+    handleStartEdit = e => {
+        this.setState({ start: e.target.value });
+    }
+    handleEndEdit = e => {
+        this.setState({ end: e.target.value });
+    }
+    handleDutiesEdit = e => {
+        this.setState({ name: e.target.value });
+    }
+
+    handleRemove = key => {
+        const removed = this.state.experience.filter(exp => exp.id !== key);
+        this.setState({ experience: removed });
+    }
+
     render() {
         return (
             <div id="experience">
