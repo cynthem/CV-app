@@ -96,13 +96,13 @@ input::placeholder {
     font-family: 'Abril Fatface', 'Times New Roman', serif;
     font-size: 3rem;
     letter-spacing: 0.05rem;
-   
+    margin-bottom: 5px;
 }
 
 .title-input {
     font-size: 1.25rem;
     font-family: 'Times New Roman';
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 .profile-input {
