@@ -81,7 +81,7 @@ input::placeholder {
 }
 
 input:hover::placeholder {
-    color: #DB6B30;
+    color: #6bc072;
 }
 
 input:focus::placeholder {
@@ -89,7 +89,7 @@ input:focus::placeholder {
 }
 
 textarea:hover {
-    color: #DB6B30;
+    color: #6bc072;
 }
 
 textarea:focus {
