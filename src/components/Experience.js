@@ -88,61 +88,63 @@ class Experience extends Component {
 
                 {experience.map(exp => {
                     return (
-                        <div className="experience-item" key={exp.id}>
+                        <div className="experience-container" key={exp.id}>
                             <FontAwesomeIcon 
                                 icon={solid('trash-can')}
                                 className="big-trash-icon"
                                 onClick={() => this.handleRemoveExperience(exp.id)}
                             />
-                            <div className="experience-top">
-                                <div className="experience-left">
-                                    <input
-                                        className="company-input"
-                                        type="text"
-                                        placeholder={company ? company : "Company/Organization"}
-                                        onChange={this.handleCompanyEdit}
-                                    />
-                                    <input
-                                        className="position-input"
-                                        type="text"
-                                        placeholder={position ? position : "Job Title"}
-                                        onChange={this.handlePositionEdit}
-                                    />
-                                </div>
-                                <div className="experience-right">
-                                    <div className="experience-location">
+                            <div className="experience-details">
+                                <div className="experience-top">
+                                    <div className="experience-left">
                                         <input
-                                            className="city-input"
+                                            className="company-input"
                                             type="text"
-                                            placeholder={city ? city : "City"}
-                                            onChange={this.handleCityEdit}
+                                            placeholder={company ? company : "Company/Organization"}
+                                            onChange={this.handleCompanyEdit}
                                         />
-                                        <p className="city-comma">, </p>
                                         <input
-                                            className="state-input"
+                                            className="position-input"
                                             type="text"
-                                            placeholder={location ? location : "ST"}
-                                            onChange={this.handleLocationEdit}
+                                            placeholder={position ? position : "Job Title"}
+                                            onChange={this.handlePositionEdit}
                                         />
                                     </div>
-                                    <div className="experience-dates">
-                                        <input
-                                            className="start-input"
-                                            type="text"
-                                            placeholder={start ? start : "Start date"}
-                                            onChange={this.handleStartEdit}
-                                        />
-                                        <p className="date-divider"> - </p>
-                                        <input
-                                            className="end-input"
-                                            type="text"
-                                            placeholder={end ? end : "End date"}
-                                            onChange={this.handleEndEdit}
-                                        />
+                                    <div className="experience-right">
+                                        <div className="experience-location">
+                                            <input
+                                                className="city-input"
+                                                type="text"
+                                                placeholder={city ? city : "City"}
+                                                onChange={this.handleCityEdit}
+                                            />
+                                            <p className="city-comma">, </p>
+                                            <input
+                                                className="state-input"
+                                                type="text"
+                                                placeholder={location ? location : "ST"}
+                                                onChange={this.handleLocationEdit}
+                                            />
+                                        </div>
+                                        <div className="experience-dates">
+                                            <input
+                                                className="start-input"
+                                                type="text"
+                                                placeholder={start ? start : "Start date"}
+                                                onChange={this.handleStartEdit}
+                                            />
+                                            <p className="date-divider"> - </p>
+                                            <input
+                                                className="end-input"
+                                                type="text"
+                                                placeholder={end ? end : "End date"}
+                                                onChange={this.handleEndEdit}
+                                            />
+                                        </div>
                                     </div>
                                 </div>
+                                <Duties />
                             </div>
-                            <Duties />
                         </div>
                     )
                 })}

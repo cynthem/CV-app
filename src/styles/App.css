@@ -134,5 +134,19 @@ textarea:focus {
     min-height: 700px;
 }
 
+.experience-container {
+    display: flex;
+    position: relative;
+    /*figure out max width then put trash in middle*/
+}
+
+.big-trash-icon {
+    position: absolute;
+    left: -20px;
+}
+
+.experience-top {
+    display: flex;
+}
 
 

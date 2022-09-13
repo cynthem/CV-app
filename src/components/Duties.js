@@ -21,7 +21,7 @@ class Duties extends Component {
         this.setState({ duty: e.target.value });
     }
 
-    onClickDuty = () => {
+    handleAddDuty = () => {
         this.setState({
             duties: this.state.duties.concat({
                 id: uniqid(),
@@ -57,7 +57,7 @@ class Duties extends Component {
                             <FontAwesomeIcon 
                                 icon={solid('trash-can')}
                                 className="trash-icon"
-                                onClick={this.handleRemoveDuty(item.id)}
+                                onClick={() => this.handleRemoveDuty(item.id)}
                             />
                         </div>
                     )
@@ -65,7 +65,7 @@ class Duties extends Component {
                 <FontAwesomeIcon 
                     icon={solid('plus')}
                     className="add-icon"
-                    onClick={this.onClickDuty}
+                    onClick={this.handleAddDuty}
                 />
             </div>
         )
