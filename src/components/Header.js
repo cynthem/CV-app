@@ -44,9 +44,9 @@ class Header extends Component {
                 <textarea
                     className="profile-input"
                     maxLength="480"
+                    value={text ? text : "This section is a great place to provide a short summary of your career history or a brief statement of your career objective in 2-5 sentences. Other titles for this section can include 'objective,' 'professional summary,' etc."}
                     onChange={this.handleTextEdit}
                 >
-                    {text ? text : "This section is a great place to provide a short summary of your career history or a brief statement of your career objective in 2-5 sentences. Other titles for this section can include 'objective,' 'professional summary,' etc."}
                 </textarea>
             </div>
         )

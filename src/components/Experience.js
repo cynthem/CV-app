@@ -13,11 +13,7 @@ class Experience extends Component {
             stateCountry: '',
             start: '',
             end: '',
-            duties:
-            { 
-                dutyId: uniqid(),
-                duty: '' 
-            },
+            duty: '',
             experience:
             {
                 id: uniqid(),
@@ -27,7 +23,11 @@ class Experience extends Component {
                 stateCountry: this.state.stateCountry,
                 start: this.state.start,
                 end: this.state.end,
-                duties: this.state.duties
+                duties: 
+                {
+                    dutyId: uniqid(),
+                    duty: this.state.duty 
+                }
             }
         };
     }
@@ -56,7 +56,7 @@ class Experience extends Component {
         this.setState({ end: e.target.value });
     }
 
-    handleDutiesEdit = e => {
+    handleDutyEdit = e => {
         this.setState({ duty: e.target.value });
     }
 
@@ -87,6 +87,7 @@ class Experience extends Component {
 
     onClickDuty = () => {
         this.setState({
+            duty: '',
             duties: this.state.experience.duties.concat({
                 dutyId: uniqid(),
                 duty: this.state.duty
@@ -134,12 +135,14 @@ class Experience extends Component {
                                     <input
                                         className="company-input"
                                         type="text"
-                                        placeholder={company ? }
+                                        placeholder={company ? company : "Company/Organization"}
+                                        onChange={this.handleCompanyEdit}
                                     />
                                     <input
                                         className="position-input"
                                         type="text"
-                                        placeholder={exp.position}
+                                        placeholder={position ? position: "Job Title"}
+                                        onChange={this.handlePositionEdit}
                                     />
                                 </div>
                                 <div className="experience-right">
@@ -147,41 +150,48 @@ class Experience extends Component {
                                         <input
                                             className="city-input"
                                             type="text"
-                                            placeholder={exp.city}
+                                            placeholder={city ? city: "City"}
+                                            onChange={this.handleCityEdit}
                                         />
+                                        <p className="city-comma">, </p>
                                         <input
                                             className="state-input"
                                             type="text"
-                                            placeholder={exp.stateCountry}
+                                            placeholder={stateCountry ? stateCountry: "ST"}
+                                            onChange={this.handleStateEdit}
                                         />
                                     </div>
                                     <div className="experience-dates">
                                         <input
                                             className="start-input"
                                             type="text"
-                                            placeholder={exp.start}
+                                            placeholder={start ? start : "Start date"}
+                                            onChange={this.handleStartEdit}
                                         />
+                                        <p className="date-divider"> - </p>
                                         <input
                                             className="end-input"
                                             type="text"
-                                            placeholder={exp.end}
+                                            placeholder={end ? end : "End date"}
+                                            onChange={this.handleEndEdit}
                                         />
                                     </div>
                                 </div>
                             </div>
                             <div className="experience-bottom">
-                                {experience.duties.map(item => {
+                                {duties.map(item => {
                                     return (
                                         <form className="duty-form" key={item.dutyId}>
                                             <FontAwesomeIcon 
                                                 icon={solid('circle')}
                                                 className="circle-icon"
                                             />
-                                            <input
-                                                className="duty-item"
-                                                type="text"
-                                                placeholder={duties.duty}
-                                            />
+                                            <textarea
+                                                className="duty-input"
+                                                onChange={this.handleDutyEdit}
+                                            >
+                                                {duty ? duty : "Add descriptions of your job responsibilities, achievements, etc., here. It's recommended to include 2-4 bullet points of 1-2 sentences each."}
+                                            </textarea>
                                             <FontAwesomeIcon 
                                                 icon={solid('trash-can')}
                                                 className="trash-icon"
