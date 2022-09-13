@@ -100,10 +100,9 @@ class Experience extends Component {
                                             className="city-input"
                                             type="text"
                                             maxLength="18"
-                                            placeholder={city ? city : "City"}
+                                            placeholder={city ? city : "City,"}
                                             onChange={this.handleCityEdit}
                                         />
-                                        <p className="city-comma">, </p>
                                         <input
                                             className="state-input"
                                             type="text"
