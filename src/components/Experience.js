@@ -12,8 +12,7 @@ class Experience extends Component {
             position: '',
             city: '',
             location: '',
-            start: '',
-            end: '',
+            dates: '',
             experience: [
                 {
                     id: uniqid(),
@@ -21,8 +20,7 @@ class Experience extends Component {
                     position: '',
                     city: '',
                     location: '',
-                    start: '',
-                    end: ''
+                    dates: ''
                 }
             ]
         };
@@ -44,12 +42,8 @@ class Experience extends Component {
         this.setState({ location: e.target.value });
     }
 
-    handleStartEdit = e => {
-        this.setState({ start: e.target.value });
-    }
-
-    handleEndEdit = e => {
-        this.setState({ end: e.target.value });
+    handleDatesEdit = e => {
+        this.setState({ dates: e.target.value });
     }
 
     handleAddExperience = () => {
@@ -60,8 +54,7 @@ class Experience extends Component {
                 position: this.state.position,
                 city: this.state.city,
                 location: this.state.location,
-                start: this.state.start,
-                end: this.state.end
+                dates: this.state.dates
             })
         });
     }
@@ -77,8 +70,7 @@ class Experience extends Component {
             position,
             city,
             location,
-            start,
-            end,
+            dates,
             experience
         } = this.state;
 
@@ -129,23 +121,13 @@ class Experience extends Component {
                                         placeholder={position ? position : "Job Title"}
                                         onChange={this.handlePositionEdit}
                                     />   
-                                    <div className="experience-dates">
-                                        <input
-                                            className="start-input"
-                                            type="text"
-                                            maxLength="10"
-                                            placeholder={start ? start : "Start date"}
-                                            onChange={this.handleStartEdit}
-                                        />
-                                        <p className="date-divider"> - </p>
-                                        <input
-                                            className="end-input"
-                                            type="text"
-                                            maxLength="10"
-                                            placeholder={end ? end : "End date"}
-                                            onChange={this.handleEndEdit}
-                                        />
-                                    </div>
+                                    <input
+                                        className="dates-input"
+                                        type="text"
+                                        maxLength="10"
+                                        placeholder={dates ? dates : "Start date - End date"}
+                                        onChange={this.handleDatesEdit}
+                                    />
                                 </div>
                                 <Duties />
                             </div>
