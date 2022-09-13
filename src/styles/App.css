@@ -176,8 +176,7 @@ textarea:focus {
 .city-input,
 .state-input,
 .position-input,
-.start-input,
-.end-input {
+.dates-input {
     
     outline: none;
     background-color: #f7f5f5;
@@ -185,8 +184,7 @@ textarea:focus {
 
 .city-input,
 .state-input,
-.start-input,
-.end-input {
+.dates-input {
     font-family: 'Times New Roman', serif;
     font-size: 0.9rem;
     font-style: italic;
@@ -194,7 +192,7 @@ textarea:focus {
 }
 
 .city-input,
-.start-input {
+.dates-input {
     text-align: right;
 }
 
@@ -210,14 +208,8 @@ textarea:focus {
     height: 35px;
 }
 
-.experience-dates {
-    display: flex;
-    align-items: center;
-}
-
-.start-input,
-.end-input {
-    width: 80px;
+.dates-input {
+    width: 150px;
 }
 
 .big-add-icon {
