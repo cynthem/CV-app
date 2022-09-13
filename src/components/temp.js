@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Duties from './Duties';
+
 import uniqid from 'uniqid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
@@ -11,7 +11,7 @@ class Experience extends Component {
             company: '',
             position: '',
             city: '',
-            location: '',
+            stateCountry: '',
             start: '',
             end: '',
             experience: [
@@ -20,7 +20,7 @@ class Experience extends Component {
                     company: '',
                     position: '',
                     city: '',
-                    location: '',
+                    stateCountry: '',
                     start: '',
                     end: ''
                 }
@@ -40,8 +40,8 @@ class Experience extends Component {
         this.setState({ city: e.target.value });
     }
 
-    handleLocationEdit = e => {
-        this.setState({ location: e.target.value });
+    handleStateEdit = e => {
+        this.setState({ stateCountry: e.target.value });
     }
 
     handleStartEdit = e => {
@@ -52,17 +52,23 @@ class Experience extends Component {
         this.setState({ end: e.target.value });
     }
 
-    handleAddExperience = () => {
+    onClickExperience = () => {
         this.setState({
             experience: this.state.experience.concat({
                 id: uniqid(),
                 company: this.state.company,
                 position: this.state.position,
                 city: this.state.city,
-                location: this.state.location,
+                stateCountry: this.state.stateCountry,
                 start: this.state.start,
                 end: this.state.end
-            })
+            }),
+            company: '',
+            position: '',
+            city: '',
+            stateCountry: '',
+            start: '',
+            end: ''
         });
     }
 
@@ -76,7 +82,7 @@ class Experience extends Component {
             company,
             position,
             city,
-            location,
+            stateCountry,
             start,
             end,
             experience
@@ -86,13 +92,13 @@ class Experience extends Component {
             <div id="experience">
                 <h2>Experience</h2>
 
-                {experience.map(exp => {
+                {experience?.map(exp => {
                     return (
                         <div className="experience-item" key={exp.id}>
                             <FontAwesomeIcon 
                                 icon={solid('trash-can')}
                                 className="big-trash-icon"
-                                onClick={() => this.handleRemoveExperience(exp.id)}
+                                onClick={this.handleRemoveExperience(exp.id)}
                             />
                             <div className="experience-top">
                                 <div className="experience-left">
@@ -105,7 +111,7 @@ class Experience extends Component {
                                     <input
                                         className="position-input"
                                         type="text"
-                                        placeholder={position ? position : "Job Title"}
+                                        placeholder={position ? position: "Job Title"}
                                         onChange={this.handlePositionEdit}
                                     />
                                 </div>
@@ -114,15 +120,15 @@ class Experience extends Component {
                                         <input
                                             className="city-input"
                                             type="text"
-                                            placeholder={city ? city : "City"}
+                                            placeholder={city ? city: "City"}
                                             onChange={this.handleCityEdit}
                                         />
                                         <p className="city-comma">, </p>
                                         <input
                                             className="state-input"
                                             type="text"
-                                            placeholder={location ? location : "ST"}
-                                            onChange={this.handleLocationEdit}
+                                            placeholder={stateCountry ? stateCountry: "ST"}
+                                            onChange={this.handleStateEdit}
                                         />
                                     </div>
                                     <div className="experience-dates">
@@ -142,18 +148,16 @@ class Experience extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <Duties />
+                            
                         </div>
                     )
                 })}
                 <FontAwesomeIcon 
                     icon={solid('plus')}
                     className="big-add-icon"
-                    onClick={this.handleAddExperience}
+                    onClick={this.onClickExperience}
                 />
             </div>
         )
     }
 }
-  
-export default Experience;
