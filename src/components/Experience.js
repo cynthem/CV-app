@@ -99,6 +99,7 @@ class Experience extends Component {
                                     <input
                                         className="company-input"
                                         type="text"
+                                        maxLength="28"
                                         placeholder={company ? company : "Company/Organization"}
                                         onChange={this.handleCompanyEdit}
                                     />
@@ -106,6 +107,7 @@ class Experience extends Component {
                                         <input
                                             className="city-input"
                                             type="text"
+                                            maxLength="18"
                                             placeholder={city ? city : "City"}
                                             onChange={this.handleCityEdit}
                                         />
@@ -113,6 +115,7 @@ class Experience extends Component {
                                         <input
                                             className="state-input"
                                             type="text"
+                                            maxLength="2"
                                             placeholder={location ? location : "ST"}
                                             onChange={this.handleLocationEdit}
                                         />
@@ -129,6 +132,7 @@ class Experience extends Component {
                                         <input
                                             className="start-input"
                                             type="text"
+                                            maxLength="10"
                                             placeholder={start ? start : "Start date"}
                                             onChange={this.handleStartEdit}
                                         />
@@ -136,6 +140,7 @@ class Experience extends Component {
                                         <input
                                             className="end-input"
                                             type="text"
+                                            maxLength="10"
                                             placeholder={end ? end : "End date"}
                                             onChange={this.handleEndEdit}
                                         />

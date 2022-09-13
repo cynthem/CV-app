@@ -162,6 +162,7 @@ textarea:focus {
     font-size: 1.2rem;
     font-family: 'Times New Roman', serif;
     font-weight: 600;
+    width: 400px;
 }
 
 .experience-location {
@@ -182,6 +183,11 @@ textarea:focus {
     text-align: right;
 }
 
+.state-input {
+    width: 33px;
+    text-align: center;
+}
+
 .position-input {
     font-family: 'Times New Roman', serif;
     font-size: 1rem;
@@ -189,6 +195,11 @@ textarea:focus {
 
 .experience-dates {
     display: flex;
+}
+
+.start-input,
+.end-input {
+    width: 80px;
 }
 
 .big-add-icon {
