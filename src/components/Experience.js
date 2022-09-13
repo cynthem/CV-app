@@ -125,6 +125,7 @@ class Experience extends Component {
                                     <input
                                         className="position-input"
                                         type="text"
+                                        maxLength="40"
                                         placeholder={position ? position : "Job Title"}
                                         onChange={this.handlePositionEdit}
                                     />   
