@@ -125,6 +125,7 @@ textarea:focus {
     font-family: 'Times New Roman', serif;
     height: 95px;
     resize: none;
+    overflow: hidden;
 }
 
 
@@ -132,21 +133,74 @@ textarea:focus {
 
 #experience {
     min-height: 700px;
+    overflow: hidden;
 }
 
 .experience-container {
     display: flex;
     position: relative;
-    /*figure out max width then put trash in middle*/
+    /*figure out max height then put trash in middle*/
 }
 
 .big-trash-icon {
     position: absolute;
-    left: -20px;
+    left: -25px;
+    font-size: 1.5rem;
+    color: #cf1313;
+}
+
+.experience-details {
+    width: 100%;
 }
 
 .experience-top {
     display: flex;
+    justify-content: space-between;
+}
+
+.experience-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-location {
+    display: flex;
+}
+
+.experience-dates {
+    display: flex;
+}
+
+.big-add-icon {
+    font-size: 1.5rem;
+    color: rgb(52, 52, 188);
+    width: 100%;
+    /* sticky to bottom of experience */
 }
 
 
+/* DUTIES */
+
+.duty-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.circle-icon {
+    font-size: 0.5rem;
+}
+
+.trash-icon {
+    color: rgb(207, 19, 19, 0.8);
+}
+
+.add-icon {
+    color: rgb(46, 46, 221, 0.8);
+    width: 100%;
+}
