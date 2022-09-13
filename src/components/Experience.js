@@ -10,7 +10,7 @@ class Experience extends Component {
             company: '',
             position: '',
             city: '',
-            state: '',
+            stateCountry: '',
             start: '',
             end: '',
             duties: [
@@ -25,7 +25,7 @@ class Experience extends Component {
                     company: 'Lumon Industries',
                     position: 'Macrodata Refiner',
                     city: 'Kier',
-                    state: 'NJ',
+                    stateCountry: 'NJ',
                     start: 'Feb 2019',
                     end: 'present',
                     duties: [
@@ -52,7 +52,7 @@ class Experience extends Component {
                     company: 'Company/Organization',
                     position: 'Job title',
                     city: 'City',
-                    state: 'ST',
+                    stateCountry: 'ST',
                     start: 'Start date',
                     end: 'End date',
                     duties: [
@@ -83,7 +83,7 @@ class Experience extends Component {
     }
 
     handleStateEdit = e => {
-        this.setState({ state: e.target.value });
+        this.setState({ stateCountry: e.target.value });
     }
 
     handleStartEdit = e => {
@@ -98,9 +98,45 @@ class Experience extends Component {
         this.setState({ duty: e.target.value });
     }
 
-    handleAddExperience = () => {}
+    onClickExperience = () => {
+        this.setState({
+            company: '',
+            position: '',
+            city: '',
+            stateCountry: '',
+            start: '',
+            end: '',
+            duties: 
+            [
+                {
+                    dutyId: uniqid(),
+                    duty: ''
+                }
+            ],
+            experience: this.state.experience.concat({
+                id: uniqid(),
+                company: this.state.company,
+                position: this.state.position,
+                city: this.state.city,
+                stateCountry: this.state.stateCountry,
+                start: this.state.start,
+                end: this.state.end,
+                duties: this.state.duties.concat({
+                    dutyId: uniqid(),
+                    duty: this.state.duty
+                })
+            })
+        });
+    }
 
-    handleAddDuty = () => {}
+    onClickDuty = () => {
+        this.setState({
+            duties: this.state.duties.concat({
+                dutyId: uniqid(),
+                duty: this.state.duty
+            })
+        })
+    }
 
     handleRemoveExperience = key => {
         const removedExp = this.state.experience.filter(exp => exp.id !== key);
@@ -117,7 +153,7 @@ class Experience extends Component {
             company,
             position,
             city,
-            state,
+            stateCountry,
             start,
             end,
             duties,
@@ -175,7 +211,7 @@ class Experience extends Component {
                                             <input
                                                 className="state-input"
                                                 type="text"
-                                                placeholder={exp.state}
+                                                placeholder={exp.stateCountry}
                                             />
                                         </form>
                                     </div>
