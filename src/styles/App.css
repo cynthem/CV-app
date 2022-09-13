@@ -23,10 +23,10 @@ body {
 }
 
 #app {
-    height: 115vh;
-    width: 66vw;
+    height: 1300px;
+    width: 995px;
     margin: 0 auto;
-    padding: 2vw 3vw;
+    padding: 30px 50px;
     background-image: url('../assets/images/background.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -37,5 +37,87 @@ body {
     background-color: #f7f5f5;
     height: 100%;
     display: grid;
-    grid-template-columns: 13vw auto;
+    grid-template-columns: 200px auto;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
+
+
+/* SIDE PANEL */
+
+#side-panel {
+    background-color: #E9CDA5;
+    box-shadow: -3px -3px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+/* MAIN SECTION */
+
+main {
+    padding: 30px;
+    box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+/* HEADER */
+
+#header {
+    min-height: 240px;
+}
+
+input::placeholder {
+    color: black;
+}
+
+.name-form,
+.title-form,
+.profile-form {
+    position: relative;
+}
+
+.name-form > input,
+.title-form > input,
+.profile-form > textarea {
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: #f7f5f5;
+}
+
+.edit-icon {
+    color: #623412;
+    position: absolute;
+    top: -2px;
+    left: -18px;
+    visibility: hidden;
+}
+
+.name-input {
+    font-family: 'Abril Fatface', 'Times New Roman', serif;
+    font-size: 3rem;
+    letter-spacing: 0.05rem;
+   
+}
+
+.title-input {
+    font-size: 1.25rem;
+    font-family: 'Times New Roman';
+    margin-bottom: 40px;
+}
+
+.profile-input {
+    font-size: 1rem;
+    font-family: 'Times New Roman';
+    height: 95px;
+    resize: none;
+}
+
+
+/* EXPERIENCE */
+
+#experience {
+    min-height: 700px;
+}
+
+
+
