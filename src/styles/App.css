@@ -408,19 +408,20 @@ main {
     min-height: 400px;
 }
 
-.a-item,
-.b-item {
-    position: relative;
-}
-
-.side-trash-icon {
-    position: absolute;
-    left: 160px;
-    top: 30px;
+.a-item {
+    margin-top: 10px;
 }
 
 .side-circle-icon {
     font-size: 0.35rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+}
+
+.sectionA-input {
+    width: 95%;
+    border: none;
+    background: none;
 }
 
 
