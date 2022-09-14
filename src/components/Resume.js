@@ -86,7 +86,7 @@ class Resume extends Component {
                         })}
                         <FontAwesomeIcon 
                             icon={solid('plus')}
-                            className="big-add-icon"
+                            className="big-add-icon-2"
                             onClick={this.renderEducation}
                         />
                     </div>

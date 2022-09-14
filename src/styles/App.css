@@ -57,7 +57,8 @@ h2 {
     overflow: hidden;
 }
 
-.experience-item {
+.experience-item,
+.education-item {
     position: relative;
 }
 
@@ -113,8 +114,7 @@ input::placeholder {
     color: black;
 }
 
-input:hover::placeholder,
-.bullet-point:hover::placeholder {
+input:hover::placeholder {
     color: #6bc072;
 }
 
