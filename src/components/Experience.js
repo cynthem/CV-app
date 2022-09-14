@@ -61,9 +61,7 @@ class Experience extends Component {
         } = this.state;
 
         return (
-            <div id="experience">
-                <h2>Experience</h2>
-                <div className="experience-container">
+                <div className="experience-container" key=>
                     <div className="experience-top">
                         <input
                             className="company-input"
@@ -127,7 +125,6 @@ class Experience extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
         )
     }
 }
