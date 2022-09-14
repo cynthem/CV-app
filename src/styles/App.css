@@ -169,20 +169,24 @@ textarea:focus {
     min-height: 700px;
 }
 
-.experience-container {
+.experience-container,
+.education-container {
     display: flex;
     flex-direction: column;
     margin-top: 15px;
 }
 
 .experience-top,
-.experience-middle {
+.experience-middle,
+.education-top,
+.education-middle {
     display: flex;
     justify-content: space-between;
     height: 28px;
 }
 
-.company-input {
+.company-input,
+.school-input {
     font-size: 1.15rem;
     font-family: 'Times New Roman', serif;
     font-weight: 600;
@@ -190,7 +194,8 @@ textarea:focus {
     height: 28px;
 }
 
-.experience-location {
+.experience-location,
+.education-location {
     display: flex;
     align-items: flex-end;
 }
@@ -199,7 +204,10 @@ textarea:focus {
 .city-input,
 .state-input,
 .position-input,
-.dates-input {
+.dates-input,
+.school-input,
+.degree-input,
+.date-input {
     border: none;
     outline: none;
     background-color: #f7f5f5;
@@ -207,7 +215,8 @@ textarea:focus {
 
 .city-input,
 .state-input,
-.dates-input {
+.dates-input,
+.date-input {
     font-family: 'Times New Roman', serif;
     font-size: 0.9rem;
     font-style: italic;
@@ -215,7 +224,8 @@ textarea:focus {
 }
 
 .city-input,
-.dates-input {
+.dates-input,
+.date-input {
     text-align: right;
 }
 
@@ -224,14 +234,16 @@ textarea:focus {
     text-align: center;
 }
 
-.position-input {
+.position-input,
+.degree-input {
     font-family: 'Times New Roman', serif;
     font-size: 1rem;
     width: 400px;
     height: 26px;
 }
 
-.dates-input {
+.dates-input,
+.date-input {
     width: 180px;
     padding-right: 4px;
 }
@@ -240,7 +252,8 @@ textarea:focus {
     margin-top: 10px;
 }
 
-.duty-render {
+.duty-render,
+.bullet-render {
     display: flex;
     justify-content: space-between;
 }
@@ -270,7 +283,8 @@ textarea:focus {
 
 /* DUTIES */
 
-.duty-item {
+.duty-item,
+.bullet-point {
     display: flex;
     width: 95%;
     gap: 10px;

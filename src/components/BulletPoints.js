@@ -22,7 +22,7 @@ class BulletPoints extends Component {
                     className="circle-icon"
                 />
                 <input
-                    className="duty-input"
+                    className="bullet-input"
                     type="text"
                     maxLength="100"
                     value={bulletPoint ? bulletPoint : "Include optional information about your studies, accomplishments, grades, etc."}
