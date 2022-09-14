@@ -419,6 +419,12 @@ main {
     top: 30px;
 }
 
+.sectionA-item {
+    display: flex;
+    width: 99%;
+    gap: 10px;
+}
+
 
 
 

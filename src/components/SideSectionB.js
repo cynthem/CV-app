@@ -19,7 +19,7 @@ class SideSectionB extends Component {
             <div className="sectionB-item" key={this.props.bKey}>
                 <FontAwesomeIcon 
                     icon={solid('circle')}
-                    className="circle-icon"
+                    className="side-circle-icon"
                 />
                 <input
                     className="sectionB-input"
