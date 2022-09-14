@@ -51,7 +51,7 @@ class SidePanel extends Component {
                     <h3>Skills</h3>
                     {[...sectionA].map(sec => {
                         return (
-                            <div className="a-item">
+                            <div className="a-item" key={sec.id}>
                                 <FontAwesomeIcon 
                                     icon={solid('trash-can')}
                                     className="side-trash-icon"
@@ -71,7 +71,7 @@ class SidePanel extends Component {
                     <h3>Activities</h3>
                     {[...sectionB].map(item => {
                         return (
-                            <div className="b-item">
+                            <div className="b-item" key={item.id}>
                                 <FontAwesomeIcon 
                                     icon={solid('trash-can')}
                                     className="side-trash-icon"
