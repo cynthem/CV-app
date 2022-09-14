@@ -24,7 +24,7 @@ class SideSectionB extends Component {
                 <input
                     className="sectionB-input"
                     type="text"
-                    placeholder={item ? item : "Ideas: volunteering, awards"}
+                    placeholder={item ? item : "Or: languages, volunteering"}
                     onChange={this.handleItemEdit}
                 />
             </div>
