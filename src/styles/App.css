@@ -206,6 +206,27 @@ textarea:focus {
     justify-content: space-between;
 }
 
+.trash-icon {
+    color: rgb(207, 19, 19, 0.5);
+    align-self: center;
+    margin-right: 10px;
+}
+
+.trash-icon:hover {
+    cursor: pointer;
+    color: rgb(207, 19, 19);
+}
+
+.add-icon {
+    color: rgb(46, 46, 221, 0.5); 
+    margin-left: -3px;
+}
+
+.add-icon:hover {
+    cursor: pointer;
+    color: rgb(46, 46, 221); 
+}
+
 
 /* DUTIES */
 
@@ -228,15 +249,6 @@ textarea:focus {
     resize: none;
     border: none;
     outline: none;
-}
-
-.trash-icon {
-    color: rgb(207, 19, 19, 0.8);
-    align-self: center;
-}
-
-.add-icon {
-    color: rgb(46, 46, 221, 0.8); 
 }
 
 
