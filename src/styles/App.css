@@ -305,3 +305,12 @@ textarea:focus {
     outline: none;
     background-color: #f7f5f5;
 }
+
+.bullet-input {
+    font-family: 'Times New Roman', serif;
+    font-size: 0.95rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: #f7f5f5;
+}
