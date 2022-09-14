@@ -45,9 +45,8 @@ class Experience extends Component {
         this.setState({ renderedDuties: [...this.state.renderedDuties, { id: uniqid() }]});
     }
 
-    removeDuty = () => {
-        const removedDuty = this.state.renderedDuties[-1];
-        const duties = this.state.renderedDuties.filter(duty => duty !== removedDuty);
+    removeDuty = key => {
+        const duties = this.state.renderedDuties.filter(duty => duty.id !== key);
         this.setState({ renderedDuties: duties });
     }
 
@@ -109,7 +108,15 @@ class Experience extends Component {
                     <div className="experience-bottom">
                         {[...renderedDuties].map(item => {
                             return (
-                                <Duties key={item.id} dutyId={item.id} />
+                                <div className="duty-render" key={item.id}>
+                                    <Duties key={item.id} dutyId={item.id} />
+                                    <FontAwesomeIcon 
+                                        icon={solid('trash-can')}
+                                        className="trash-icon"
+                                        key={item.id}
+                                        onClick={() => this.removeDuty(item.id)}
+                                    />
+                                </div>
                             )
                         })}
                         <div className="duties-edit">
@@ -117,11 +124,6 @@ class Experience extends Component {
                                 icon={solid('plus')}
                                 className="add-icon"
                                 onClick={() => this.renderDuty()}
-                            />
-                            <FontAwesomeIcon 
-                                icon={solid('trash-can')}
-                                className="trash-icon"
-                                onClick={() => this.removeDuty()}
                             />
                         </div>
                     </div>
