@@ -139,6 +139,7 @@ textarea:focus {
 .experience-container {
     display: flex;
     flex-direction: column;
+    margin-top: 15px;
 }
 
 .experience-top,
@@ -202,6 +203,10 @@ textarea:focus {
     padding-right: 4px;
 }
 
+.experience-bottom {
+    margin-top: 10px;
+}
+
 .duty-render {
     display: flex;
     justify-content: space-between;
@@ -221,6 +226,7 @@ textarea:focus {
 .add-icon {
     color: rgb(46, 46, 221, 0.5); 
     margin-left: -3px;
+    margin-top: 6px;
 }
 
 .add-icon:hover {
@@ -233,7 +239,7 @@ textarea:focus {
 
 .duty-item {
     display: flex;
-    width: 91%;
+    width: 95%;
     gap: 10px;
 }
 
