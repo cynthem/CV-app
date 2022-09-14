@@ -5,22 +5,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 class Experience extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             company: '',
             position: '',
             city: '',
             location: '',
             dates: '',
-            experience: [
+            renderedDuties: [
                 {
-                    id: uniqid(),
-                    company: '',
-                    position: '',
-                    city: '',
-                    location: '',
-                    dates: ''
+                    id: uniqid()
                 }
             ]
         };
@@ -46,22 +41,13 @@ class Experience extends Component {
         this.setState({ dates: e.target.value });
     }
 
-    handleAddExperience = () => {
-        this.setState({
-            experience: this.state.experience.concat({
-                id: uniqid(),
-                company: this.state.company,
-                position: this.state.position,
-                city: this.state.city,
-                location: this.state.location,
-                dates: this.state.dates
-            })
-        });
+    renderDuty = () => {
+        this.setState({ renderedDuties: [...this.state.renderedDuties, { id: uniqid() }]});
     }
 
-    handleRemoveExperience = key => {
-        const removedExp = this.state.experience.filter(exp => exp.id !== key);
-        this.setState({ experience: removedExp });
+    removeDuty = key => {
+        const duties = this.state.renderedDuties.filter(duty => duty.id !== key);
+        this.setState({ renderedDuties: duties });
     }
 
     render() {
@@ -71,76 +57,70 @@ class Experience extends Component {
             city,
             location,
             dates,
-            experience
+            renderedDuties
         } = this.state;
 
         return (
             <div id="experience">
                 <h2>Experience</h2>
-
-                {experience.map(exp => {
-                    return (
-                        <div className="experience-container" key={exp.id}>
-                            <FontAwesomeIcon 
-                                icon={solid('trash-can')}
-                                className="big-trash-icon"
-                                onClick={() => this.handleRemoveExperience(exp.id)}
+                <div className="experience-container">
+                    <div className="experience-top">
+                        <input
+                            className="company-input"
+                            type="text"
+                            maxLength="28"
+                            placeholder={company ? company : "Company/Organization"}
+                            onChange={this.handleCompanyEdit}
+                        />
+                        <div className="experience-location">
+                            <input
+                                className="city-input"
+                                type="text"
+                                maxLength="18"
+                                placeholder={city ? city : "City,"}
+                                onChange={this.handleCityEdit}
                             />
-                            <div className="experience-details">
-                                <div className="experience-top">
-                                    <input
-                                        className="company-input"
-                                        type="text"
-                                        maxLength="28"
-                                        placeholder={company ? company : "Company/Organization"}
-                                        onChange={this.handleCompanyEdit}
-                                    />
-                                    <div className="experience-location">
-                                        <input
-                                            className="city-input"
-                                            type="text"
-                                            maxLength="18"
-                                            placeholder={city ? city : "City,"}
-                                            onChange={this.handleCityEdit}
-                                        />
-                                        <input
-                                            className="state-input"
-                                            type="text"
-                                            maxLength="2"
-                                            placeholder={location ? location : "ST"}
-                                            onChange={this.handleLocationEdit}
-                                        />
-                                    </div>
-                                </div>
-                                <div className="experience-middle">
-                                    <input
-                                        className="position-input"
-                                        type="text"
-                                        maxLength="40"
-                                        placeholder={position ? position : "Job Title"}
-                                        onChange={this.handlePositionEdit}
-                                    />   
-                                    <input
-                                        className="dates-input"
-                                        type="text"
-                                        maxLength="10"
-                                        placeholder={dates ? dates : "Start date - End date"}
-                                        onChange={this.handleDatesEdit}
-                                    />
-                                </div>
-                                <Duties />
-                            </div>
+                            <input
+                                className="state-input"
+                                type="text"
+                                maxLength="2"
+                                placeholder={location ? location : "ST"}
+                                onChange={this.handleLocationEdit}
+                            />
                         </div>
-                    )
-                })}
-                <FontAwesomeIcon 
-                    icon={solid('plus')}
-                    className="big-add-icon"
-                    onClick={this.handleAddExperience}
-                />
+                    </div>
+                    <div className="experience-middle">
+                        <input
+                            className="position-input"
+                            type="text"
+                            maxLength="40"
+                            placeholder={position ? position : "Job Title"}
+                            onChange={this.handlePositionEdit}
+                        />   
+                        <input
+                            className="dates-input"
+                            type="text"
+                            maxLength="10"
+                            placeholder={dates ? dates : "Start date - End date"}
+                            onChange={this.handleDatesEdit}
+                        />
+                    </div>
+                    <div className="experience-bottom">
+                        {[...renderedDuties].map(item => {
+                            return (
+                                <Duties key={item.id} dutyId={item.id} />
+                            )
+                        })}
+                        <FontAwesomeIcon 
+                            icon={solid('plus')}
+                            className="add-icon"
+                            onClick={() => this.renderDuty()}
+                        />
+                    </div>
+                </div>
             </div>
         )
     }
 }
-  
+
 export default Experience;

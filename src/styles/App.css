@@ -137,20 +137,7 @@ textarea:focus {
 
 .experience-container {
     display: flex;
-    position: relative;
-    /*figure out max height then put trash in middle*/
-}
-
-.big-trash-icon {
-    position: absolute;
-    left: -26px;
-    top: 30px;
-    font-size: 1.5rem;
-    color: #cf1313;
-}
-
-.experience-details {
-    width: 100%;
+    flex-direction: column;
 }
 
 .experience-top,
@@ -214,13 +201,6 @@ textarea:focus {
     padding-right: 4px;
 }
 
-.big-add-icon {
-    font-size: 1.8rem;
-    color: rgb(52, 52, 188);
-    width: 100%;
-    /* sticky to bottom of experience */
-}
-
 
 /* DUTIES */
 
@@ -231,7 +211,7 @@ textarea:focus {
 
 .circle-icon {
     font-size: 0.5rem;
-    padding-top: 7px;
+    padding-top: 8px;
 }
 
 .duty-input {
@@ -250,6 +230,24 @@ textarea:focus {
 }
 
 .add-icon {
-    color: rgb(46, 46, 221, 0.8);
-    
+    color: rgb(46, 46, 221, 0.8); 
+}
+
+
+
+
+
+.big-add-icon {
+    font-size: 1.8rem;
+    color: rgb(52, 52, 188);
+    width: 100%;
+    /* sticky to bottom of experience */
+}
+
+.big-trash-icon {
+    position: absolute;
+    left: -26px;
+    top: 30px;
+    font-size: 1.5rem;
+    color: #cf1313;
 }
