@@ -201,11 +201,17 @@ textarea:focus {
     padding-right: 4px;
 }
 
+.duty-render {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 /* DUTIES */
 
 .duty-item {
     display: flex;
+    width: 91%;
     gap: 10px;
 }
 
@@ -217,7 +223,7 @@ textarea:focus {
 .duty-input {
     font-family: 'Times New Roman', serif;
     font-size: 1rem;
-    width: 91%;
+    width: 100%;
     line-height: 1.5;
     resize: none;
     border: none;
