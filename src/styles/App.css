@@ -123,9 +123,10 @@ textarea:focus {
 .profile-input {
     font-size: 1rem;
     font-family: 'Times New Roman', serif;
-    height: 95px;
+    height: 96px;
     resize: none;
     overflow: hidden;
+    line-height: 1.5;
 }
 
 
@@ -144,15 +145,15 @@ textarea:focus {
 .experience-middle {
     display: flex;
     justify-content: space-between;
-    height: 30px;
+    height: 28px;
 }
 
 .company-input {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-family: 'Times New Roman', serif;
     font-weight: 600;
     width: 400px;
-    height: 30px;
+    height: 28px;
 }
 
 .experience-location {
@@ -193,7 +194,7 @@ textarea:focus {
     font-family: 'Times New Roman', serif;
     font-size: 1rem;
     width: 400px;
-    height: 30px;
+    height: 26px;
 }
 
 .dates-input {
@@ -237,18 +238,19 @@ textarea:focus {
 }
 
 .circle-icon {
-    font-size: 0.5rem;
-    padding-top: 8px;
+    font-size: 0.4rem;
+    padding-top: 11px;
 }
 
 .duty-input {
     font-family: 'Times New Roman', serif;
-    font-size: 1rem;
+    font-size: 0.95rem;
     width: 100%;
     line-height: 1.5;
     resize: none;
     border: none;
     outline: none;
+    background-color: #f7f5f5;
 }
 
 
