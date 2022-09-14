@@ -4,7 +4,7 @@ class SideSectionA extends Component {
     render() {
         return (
             <div className="sectionA-container">
-                <h2>Skills</h2>
+                <h3>Skills</h3>
             </div>
         )
     }
