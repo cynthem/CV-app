@@ -100,7 +100,7 @@ class Experience extends Component {
                         <input
                             className="dates-input"
                             type="text"
-                            maxLength="20"
+                            maxLength="22"
                             placeholder={dates ? dates : "Start date - End date"}
                             onChange={this.handleDatesEdit}
                         />
