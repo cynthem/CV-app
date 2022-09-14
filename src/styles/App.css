@@ -326,12 +326,12 @@ main {
     background-color: #4141d6;
     border-radius: 50%;
     margin-left: -100px;
-    margin-top: -40px;
+    margin-top: -20px;
 }
 
 .contact-content {
-    margin-left: 100px;
-    margin-top: 40px;
+    padding-left: 120px;
+    padding-top: 20px;
 }
 
 .sectionA-container {
