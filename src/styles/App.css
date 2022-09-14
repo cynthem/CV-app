@@ -74,7 +74,8 @@ h2 {
     color: rgb(52, 52, 188);
 }
 
-.big-trash-icon {
+.big-trash-icon,
+.big-trash-icon-2 {
     position: absolute;
     left: -27px;
     top: 15px;
@@ -83,7 +84,8 @@ h2 {
     cursor: pointer;
 }
 
-.big-trash-icon:hover {
+.big-trash-icon:hover,
+.big-trash-icon-2:hover {
     color: rgb(207, 19, 19);
 }
 
@@ -314,4 +316,5 @@ textarea:focus {
     border: none;
     outline: none;
     background-color: #f7f5f5;
+    margin-top: 10px;
 }

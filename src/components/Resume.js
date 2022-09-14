@@ -77,7 +77,7 @@ class Resume extends Component {
                                 <div className="education-item" key={edu.id}>
                                     <FontAwesomeIcon 
                                         icon={solid('trash-can')}
-                                        className="big-trash-icon"
+                                        className="big-trash-icon-2"
                                         onClick={() => this.removeEducation(edu.id)}
                                     />
                                     <Education key={edu.id} eduId={edu.id} />
@@ -86,7 +86,7 @@ class Resume extends Component {
                         })}
                         <FontAwesomeIcon 
                             icon={solid('plus')}
-                            className="big-add-icon-2"
+                            className="big-add-icon"
                             onClick={this.renderEducation}
                         />
                     </div>
