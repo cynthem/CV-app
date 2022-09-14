@@ -113,7 +113,8 @@ input::placeholder {
     color: black;
 }
 
-input:hover::placeholder {
+input:hover::placeholder,
+.bullet-point:hover::placeholder {
     color: #6bc072;
 }
 
