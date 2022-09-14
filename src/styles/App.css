@@ -324,6 +324,7 @@ main {
     background-color: #ffe7b0;
     box-shadow: -3px -3px 5px rgba(0, 0, 0, 0.3);
     overflow: hidden;
+    padding: 0 10px;
 }
 
 .contact-container {
@@ -405,6 +406,17 @@ main {
 .sectionA-container {
     margin-top: 58px;
     min-height: 400px;
+}
+
+.a-item,
+.b-item {
+    position: relative;
+}
+
+.side-trash-icon {
+    position: absolute;
+    left: 160px;
+    top: 30px;
 }
 
 

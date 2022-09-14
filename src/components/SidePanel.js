@@ -51,13 +51,11 @@ class SidePanel extends Component {
                     <h3>Skills</h3>
                     {[...sectionA].map(sec => {
                         return (
-                            <div className="a-item" key={sec.id}>
+                            <div 
+                                className="a-item" 
+                                key={sec.id}
+                                onClick={() => this.removeSectionA(sec.id)}>
                                 <SideSectionA key={sec.id} aKey={sec.id}/>
-                                <FontAwesomeIcon 
-                                    icon={solid('trash-can')}
-                                    className="side-trash-icon"
-                                    onClick={() => this.removeSectionA(sec.id)}
-                                />
                             </div>
                         )
                     })}
@@ -71,13 +69,11 @@ class SidePanel extends Component {
                     <h3>Activities</h3>
                     {[...sectionB].map(item => {
                         return (
-                            <div className="b-item" key={item.id}>
+                            <div 
+                                className="b-item" 
+                                key={item.id}
+                                onClick={() => this.removeSectionB(item.id)}>
                                 <SideSectionB key={item.id} bKey={item.id}/>
-                                <FontAwesomeIcon 
-                                    icon={solid('trash-can')}
-                                    className="side-trash-icon"
-                                    onClick={() => this.removeSectionB(item.id)}
-                                />
                             </div>
                         )
                     })}
