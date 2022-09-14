@@ -113,7 +113,6 @@ class Experience extends Component {
                                     <FontAwesomeIcon 
                                         icon={solid('trash-can')}
                                         className="trash-icon"
-                                        key={item.id}
                                         onClick={() => this.removeDuty(item.id)}
                                     />
                                 </div>
