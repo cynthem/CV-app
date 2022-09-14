@@ -15,6 +15,11 @@ class Resume extends Component {
                 {
                     id: uniqid()
                 }
+            ],
+            education: [
+                {
+                    id: uniqid()
+                }
             ]
         }
     }
@@ -28,18 +33,23 @@ class Resume extends Component {
         this.setState({ experiences: jobs });
     }
 
+    renderEducation = () => {
+        this.setState({ education: [...this.state.education, { id: uniqid() }]});
+    }
+
+    removeEducation = key => {
+        const schools = this.state.education.filter(school => school.id !== key);
+        this.setState({ education: schools });
+    }
+
     render() {
-        const { experiences } = this.state;
+        const { experiences, education } = this.state;
 
         return (
             <div id="resume">
-                
                 <SidePanel />
-
                 <main>
-
                     <Header />
-
                     <div id="experience">
                         <h2>Experience</h2>
                         {[...experiences].map(exp => {
@@ -60,11 +70,27 @@ class Resume extends Component {
                             onClick={this.renderExperience}
                         />
                     </div>
-
-                    <Education />
-
+                    <div id="education">
+                        <h2>Education</h2>
+                        {[...education].map(edu => {
+                            return (
+                                <div className="education-item">
+                                    <FontAwesomeIcon 
+                                        icon={solid('trash-can')}
+                                        className="big-trash-icon"
+                                        onClick={() => this.removeEducation(edu.id)}
+                                    />
+                                    <Education key={edu.id} eduId={edu.id} />
+                                </div>
+                            )
+                        })}
+                        <FontAwesomeIcon 
+                            icon={solid('plus')}
+                            className="big-add-icon"
+                            onClick={this.renderEducation}
+                        />
+                    </div>
                 </main>
-
             </div>
         )
     }
