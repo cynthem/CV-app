@@ -24,7 +24,7 @@ class Duties extends Component {
                 <textarea
                     className="duty-input"
                     maxLength="180"
-                    value={duty ? duty : "Add descriptions of your job responsibilities, achievements, and anything else notable about this experience here. It's recommended to include 2-4 bullet points of 1-2 sentences each."}
+                    value={duty ? duty : "Add descriptions of your job responsibilities, achievements, and anything else notable about this experience here. Try to include 2-4 bullet points each with 1-2 sentences."}
                     onChange={this.handleDutyEdit}
                 >
                 </textarea>
