@@ -402,12 +402,17 @@ main {
     height: 70px;
 }
 
-
-
-
-
-
-
 .sectionA-container {
-    margin-top: 40px;
+    margin-top: 58px;
+    min-height: 400px;
+}
+
+
+
+
+
+@media print {
+    @page {
+        margin: 0;
+    }
 }

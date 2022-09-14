@@ -52,12 +52,12 @@ class SidePanel extends Component {
                     {[...sectionA].map(sec => {
                         return (
                             <div className="a-item" key={sec.id}>
+                                <SideSectionA key={sec.id} aKey={sec.id}/>
                                 <FontAwesomeIcon 
                                     icon={solid('trash-can')}
                                     className="side-trash-icon"
                                     onClick={() => this.removeSectionA(sec.id)}
                                 />
-                                <SideSectionA key={sec.id} aKey={sec.id}/>
                             </div>
                         )
                     })}
@@ -72,12 +72,12 @@ class SidePanel extends Component {
                     {[...sectionB].map(item => {
                         return (
                             <div className="b-item" key={item.id}>
+                                <SideSectionB key={item.id} bKey={item.id}/>
                                 <FontAwesomeIcon 
                                     icon={solid('trash-can')}
                                     className="side-trash-icon"
                                     onClick={() => this.removeSectionB(item.id)}
                                 />
-                                <SideSectionB key={item.id} bKey={item.id}/>
                             </div>
                         )
                     })}
