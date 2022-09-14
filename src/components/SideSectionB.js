@@ -3,7 +3,9 @@ import React, { Component } from "react";
 class SideSectionB extends Component {
     render() {
         return (
-            <h2>Section B</h2>
+            <div className="sectionB-container">
+                <h2>Activities</h2>
+            </div>
         )
     }
 }

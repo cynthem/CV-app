@@ -46,7 +46,28 @@ h2 {
     font-size: 1.35rem;
 }
 
-/* RESUME */
+input::placeholder {
+    color: black;
+}
+
+input:hover::placeholder {
+    color: #6bc072;
+}
+
+input:focus::placeholder {
+    background-color: white;
+}
+
+textarea:hover {
+    color: #6bc072;
+}
+
+textarea:focus {
+    background-color: white;
+}
+
+
+/* RESUME & MAIN SECTION */
 
 #resume {
     background-color: #f7f5f5;
@@ -55,6 +76,11 @@ h2 {
     grid-template-columns: 200px auto;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     overflow: hidden;
+}
+
+main {
+    padding: 30px;
+    box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.3);
 }
 
 .experience-item,
@@ -90,46 +116,10 @@ h2 {
 }
 
 
-/* SIDE PANEL */
-
-#side-panel {
-    background-color: #E9CDA5;
-    box-shadow: -3px -3px 5px rgba(0, 0, 0, 0.3);
-}
-
-
-/* MAIN SECTION */
-
-main {
-    padding: 30px;
-    box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.3);
-}
-
-
 /* HEADER */
 
 #header {
     min-height: 226px;
-}
-
-input::placeholder {
-    color: black;
-}
-
-input:hover::placeholder {
-    color: #6bc072;
-}
-
-input:focus::placeholder {
-    background-color: white;
-}
-
-textarea:hover {
-    color: #6bc072;
-}
-
-textarea:focus {
-    background-color: white;
 }
 
 .name-input,
@@ -166,7 +156,7 @@ textarea:focus {
 }
 
 
-/* EXPERIENCE */
+/* EXPERIENCE & EDUCATION */
 
 #experience {
     min-height: 700px;
@@ -283,9 +273,6 @@ textarea:focus {
     color: rgb(46, 46, 221); 
 }
 
-
-/* DUTIES */
-
 .duty-item,
 .bullet-point {
     display: flex;
@@ -317,4 +304,36 @@ textarea:focus {
     outline: none;
     background-color: #f7f5f5;
     margin-top: 4px;
+}
+
+
+/* SIDE PANEL */
+
+#side-panel {
+    background-color: #E9CDA5;
+    box-shadow: -3px -3px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.contact-container {
+    min-height: 285px;
+    margin-top: -17px;
+}
+
+.contact {
+    min-height: 280px;
+    width: 400px;
+    background-color: #4141d6;
+    border-radius: 50%;
+    margin-left: -100px;
+    margin-top: -40px;
+}
+
+.contact-content {
+    margin-left: 100px;
+    margin-top: 40px;
+}
+
+.sectionA-container {
+    margin-top: 40px;
 }
