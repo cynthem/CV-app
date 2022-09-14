@@ -70,7 +70,7 @@ class Contact extends Component {
                             <textarea
                                 className="address-input"
                                 //maxLength="14"
-                                value={address ? address : "123 Address St. City, ST 90210"}
+                                value={address ? address : "123 Your Address St. City, ST 90210"}
                                 onChange={this.handleAddressEdit}
                             ></textarea>
                         </div>
@@ -82,7 +82,7 @@ class Contact extends Component {
                             <textarea
                                 className="website-input"
                                 //maxLength="14"
-                                value={website ? website : "www.website.com linkedin.com/in/yourname "}
+                                value={website ? website : "www.website.com linkedin.com/in/name "}
                                 onChange={this.handleWebsiteEdit}
                             ></textarea>
                         </div>
