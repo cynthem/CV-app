@@ -20,7 +20,7 @@ class SidePanel extends Component {
                     id: uniqid()
                 }
             ]
-        }
+        };
     }
 
     renderSectionA = () => {
@@ -64,11 +64,29 @@ class SidePanel extends Component {
                     <FontAwesomeIcon 
                         icon={solid('plus')}
                         className="side-add-icon"
-                        onClick={this.renderExperience}
+                        onClick={this.renderSectionA}
                     />
                 </div>
-    
-                <SideSectionB />
+                <div className="sectionB-container">
+                    <h3>Activities</h3>
+                    {[...sectionB].map(item => {
+                        return (
+                            <div className="b-item">
+                                <FontAwesomeIcon 
+                                    icon={solid('trash-can')}
+                                    className="side-trash-icon"
+                                    onClick={() => this.removeSectionB(item.id)}
+                                />
+                                <SideSectionB key={item.id} bKey={item.id}/>
+                            </div>
+                        )
+                    })}
+                    <FontAwesomeIcon 
+                        icon={solid('plus')}
+                        className="side-add-icon"
+                        onClick={this.renderSectionB}
+                    />
+                </div>
             </div>
         )
     }
