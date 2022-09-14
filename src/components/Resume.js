@@ -74,7 +74,7 @@ class Resume extends Component {
                         <h2>Education</h2>
                         {[...education].map(edu => {
                             return (
-                                <div className="education-item">
+                                <div className="education-item" key={edu.id}>
                                     <FontAwesomeIcon 
                                         icon={solid('trash-can')}
                                         className="big-trash-icon"
