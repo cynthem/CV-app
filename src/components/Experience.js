@@ -45,8 +45,9 @@ class Experience extends Component {
         this.setState({ renderedDuties: [...this.state.renderedDuties, { id: uniqid() }]});
     }
 
-    removeDuty = key => {
-        const duties = this.state.renderedDuties.filter(duty => duty.id !== key);
+    removeDuty = () => {
+        const removedDuty = this.state.renderedDuties[-1];
+        const duties = this.state.renderedDuties.filter(duty => duty !== removedDuty);
         this.setState({ renderedDuties: duties });
     }
 
@@ -111,11 +112,18 @@ class Experience extends Component {
                                 <Duties key={item.id} dutyId={item.id} />
                             )
                         })}
-                        <FontAwesomeIcon 
-                            icon={solid('plus')}
-                            className="add-icon"
-                            onClick={() => this.renderDuty()}
-                        />
+                        <div className="duties-edit">
+                            <FontAwesomeIcon 
+                                icon={solid('plus')}
+                                className="add-icon"
+                                onClick={() => this.renderDuty()}
+                            />
+                            <FontAwesomeIcon 
+                                icon={solid('trash-can')}
+                                className="trash-icon"
+                                onClick={() => this.removeDuty()}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
