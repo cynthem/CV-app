@@ -310,7 +310,7 @@ main {
 /* SIDE PANEL */
 
 #side-panel {
-    background-color: #E9CDA5;
+    background-color: #ffe7b0;
     box-shadow: -3px -3px 5px rgba(0, 0, 0, 0.3);
     overflow: hidden;
 }
@@ -330,9 +330,72 @@ main {
 }
 
 .contact-content {
-    padding-left: 120px;
-    padding-top: 20px;
+    padding-left: 115px;
+    padding-top: 75px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
 }
+
+.contact-content > div {
+    display: flex;
+    gap: 8px;
+}
+
+.phone,
+.email {
+    padding-bottom: 4px;
+}
+
+.phone-icon,
+.email-icon,
+.address-icon,
+.website-icon {
+    color: #e48755;
+    font-size: 1.1rem;
+}
+
+.address-icon {
+    font-size: 1.3rem;
+    margin-right: 2px;
+    padding-top: 6px;
+}
+
+.website-icon {
+    padding-top: 8px;
+}
+
+.phone-input,
+.email-input,
+.address-input,
+.website-input {
+    background: none;
+    outline: none;
+    border: none;
+    width: 150px;
+}
+
+.phone-input::placeholder,
+.email-input::placeholder,
+.address-input,
+.website-input  {
+    color: #f7f5f5;
+    font-family: 'Times New Roman', serif;
+    resize: none;
+    overflow: hidden;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+.website-input {
+    height: 70px;
+}
+
+
+
+
+
+
 
 .sectionA-container {
     margin-top: 40px;
