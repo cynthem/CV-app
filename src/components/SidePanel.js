@@ -61,7 +61,7 @@ class SidePanel extends Component {
                     })}
                     <FontAwesomeIcon 
                         icon={solid('plus')}
-                        className="side-add-icon"
+                        className="add-icon"
                         onClick={this.renderSectionA}
                     />
                 </div>
@@ -79,7 +79,7 @@ class SidePanel extends Component {
                     })}
                     <FontAwesomeIcon 
                         icon={solid('plus')}
-                        className="side-add-icon"
+                        className="add-icon"
                         onClick={this.renderSectionB}
                     />
                 </div>
