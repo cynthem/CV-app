@@ -34,14 +34,6 @@ body {
     background-position: center;
 }
 
-#resume {
-    background-color: #f7f5f5;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 200px auto;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-}
-
 h2 {
     border-top: 1px solid #DB6B30;
     border-bottom: 2px solid #DB6B30;
@@ -53,6 +45,47 @@ h2 {
     color: #DB6B30;
     font-size: 1.35rem;
 }
+
+/* RESUME */
+
+#resume {
+    background-color: #f7f5f5;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 200px auto;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.experience-item {
+    position: relative;
+}
+
+.big-add-icon {
+    font-size: 1.8rem;
+    color: rgb(52, 52, 188, 0.5);
+    width: 100%;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.big-add-icon:hover {
+    color: rgb(52, 52, 188);
+}
+
+.big-trash-icon {
+    position: absolute;
+    left: -27px;
+    top: 15px;
+    font-size: 1.2rem;
+    color: rgb(207, 19, 19, 0.5);
+    cursor: pointer;
+}
+
+.big-trash-icon:hover {
+    color: rgb(207, 19, 19);
+}
+
 
 /* SIDE PANEL */
 
@@ -257,23 +290,4 @@ textarea:focus {
     border: none;
     outline: none;
     background-color: #f7f5f5;
-}
-
-
-
-
-
-.big-add-icon {
-    font-size: 1.8rem;
-    color: rgb(52, 52, 188);
-    width: 100%;
-    /* sticky to bottom of experience */
-}
-
-.big-trash-icon {
-    position: absolute;
-    left: -26px;
-    top: 30px;
-    font-size: 1.5rem;
-    color: #cf1313;
 }
