@@ -389,6 +389,11 @@ main {
     font-size: 0.9rem;
 }
 
+.phone-input,
+.email-input {
+    color: #f7f5f5;
+}
+
 .website-input {
     height: 70px;
 }
@@ -482,6 +487,8 @@ main {
 
     .phone-input::placeholder,
     .email-input::placeholder,
+    .phone-input,
+    .email-input,
     .address-input,
     .website-input {
         color: black;
