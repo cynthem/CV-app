@@ -86,7 +86,7 @@ class SidePanel extends Component {
                     <input
                         className="titleB-input"
                         type="text"
-                        placeholder={titleB ? titleB : "Activitiess"}
+                        placeholder={titleB ? titleB : "Activities"}
                         onChange={this.handleTitleBEdit}
                     />
                     {[...sectionB].map(item => {

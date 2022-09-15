@@ -46,17 +46,6 @@ h2 {
     font-size: 1.35rem;
 }
 
-h3 {
-    border-bottom: 1px solid #DB6B30;
-    margin: 0;
-    text-align: center;
-    padding-bottom: 5px;
-    font-family: 'Abril Fatface', 'Times New Roman', serif;
-    letter-spacing: 0.05rem;
-    color: #DB6B30;
-    font-size: 1.25rem;
-}
-
 input::placeholder {
     color: black;
 }
@@ -402,6 +391,25 @@ main {
 
 .website-input {
     height: 70px;
+}
+
+h3 {
+    margin: 0;
+    padding-bottom: 5px;
+    font-family: 'Abril Fatface', 'Times New Roman', serif;
+    letter-spacing: 0.05rem;
+    color: #DB6B30;
+    font-size: 1.25rem;
+}
+
+.titleA-input,
+.titleB-input {
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #DB6B30;
+    text-align: center;
+    width: 100%;
 }
 
 .sectionA-container {
