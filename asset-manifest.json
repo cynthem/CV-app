@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/CV-app/static/css/main.69d0c3f1.css",
+    "main.js": "/CV-app/static/js/main.22e96d25.js",
+    "static/media/background.png": "/CV-app/static/media/background.9d450ca7d08ecd428aeb.png",
+    "static/media/abril-fatface-v19-latin-regular.svg": "/CV-app/static/media/abril-fatface-v19-latin-regular.b96dc2e87a6e3756765c.svg",
+    "static/media/abril-fatface-v19-latin-regular.ttf": "/CV-app/static/media/abril-fatface-v19-latin-regular.664dffd53d8740518801.ttf",
+    "static/media/abril-fatface-v19-latin-regular.woff": "/CV-app/static/media/abril-fatface-v19-latin-regular.77e21841a0d8f12af2f6.woff",
+    "static/media/abril-fatface-v19-latin-regular.eot": "/CV-app/static/media/abril-fatface-v19-latin-regular.a50ff46f8e85ad10f1c4.eot",
+    "static/media/abril-fatface-v19-latin-regular.woff2": "/CV-app/static/media/abril-fatface-v19-latin-regular.e28de833ee7ea7791eba.woff2",
+    "index.html": "/CV-app/index.html",
+    "main.69d0c3f1.css.map": "/CV-app/static/css/main.69d0c3f1.css.map",
+    "main.22e96d25.js.map": "/CV-app/static/js/main.22e96d25.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.69d0c3f1.css",
+    "static/js/main.22e96d25.js"
+  ]
+}
