@@ -10,6 +10,8 @@ class SidePanel extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            titleA: '',
+            titleB: '',
             sectionA: [
                 {
                     id: uniqid()
@@ -21,6 +23,14 @@ class SidePanel extends Component {
                 }
             ]
         };
+    }
+
+    handleTitleAEdit = e => {
+        this.setState({ titleA: e.target.value });
+    }
+
+    handleTitleBEdit = e => {
+        this.setState({ titleB: e.target.value });
     }
 
     renderSectionA = () => {
@@ -42,13 +52,18 @@ class SidePanel extends Component {
     }
 
     render() {
-        const { sectionA, sectionB } = this.state;
+        const { titleA, titleB, sectionA, sectionB } = this.state;
 
         return (
             <div id="side-panel">
                 <Contact />
                 <div className="sectionA-container">
-                    <h3>Skills</h3>
+                    <input
+                        className="titleA-input"
+                        type="text"
+                        placeholder={titleA ? titleA : "Skills"}
+                        onChange={this.handleTitleAEdit}
+                    />
                     {[...sectionA].map(sec => {
                         return (
                             <div className="a-item" key={sec.id}>
@@ -68,7 +83,12 @@ class SidePanel extends Component {
                     />
                 </div>
                 <div className="sectionB-container">
-                    <h3>Activities</h3>
+                    <input
+                        className="titleB-input"
+                        type="text"
+                        placeholder={titleB ? titleB : "Activitiess"}
+                        onChange={this.handleTitleBEdit}
+                    />
                     {[...sectionB].map(item => {
                         return (
                             <div className="b-item" key={item.id}>

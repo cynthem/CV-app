@@ -351,7 +351,7 @@ main {
 
 .contact-content > div {
     display: flex;
-    gap: 8px;
+    gap: 9px;
 }
 
 .phone,
@@ -384,7 +384,8 @@ main {
     background: none;
     outline: none;
     border: none;
-    width: 150px;
+    width: 148px;
+    padding: 0;
 }
 
 .phone-input::placeholder,
