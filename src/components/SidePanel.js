@@ -55,7 +55,7 @@ class SidePanel extends Component {
                                 <SideSectionA key={sec.id} aKey={sec.id} />
                                 <FontAwesomeIcon 
                                     icon={solid('trash-can')}
-                                    className="trash-icon"
+                                    className="side-trash-icon"
                                     onClick={() => this.removeSectionA(sec.id)}
                                 />
                             </div>
@@ -75,7 +75,7 @@ class SidePanel extends Component {
                                 <SideSectionB key={item.id} bKey={item.id}  />
                                 <FontAwesomeIcon 
                                     icon={solid('trash-can')}
-                                    className="trash-icon"
+                                    className="side-trash-icon"
                                     onClick={() => this.removeSectionB(item.id)}
                                 />
                             </div>
