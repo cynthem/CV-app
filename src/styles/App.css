@@ -425,6 +425,7 @@ main {
     width: 95%;
     border: none;
     background: none;
+    outline: none;
     padding: 0;
 }
 
@@ -445,6 +446,34 @@ main {
 
 
 @media print {
+
+    #resume,
+    main,
+    #side-panel {
+        box-shadow: none;
+    }
+
+    main {
+        border-left: 1px solid black;
+    }
+
+    .phone-input::placeholder,
+    .email-input::placeholder,
+    .address-input,
+    .website-input {
+        color: black;
+    }
+
+    .add-icon,
+    .trash-icon,
+    .trash-icon-2,
+    .big-add-icon,
+    .big-trash-icon,
+    .big-trash-icon-2,
+    .side-trash-icon {
+        display: none;
+    }
+
     @page {
         margin: 0;
     }
