@@ -1,5 +1,5 @@
 # CV-app
-> A React app that helps a user build a printable resume from a template. Uses the uniqid library to allow bullet point items and resume sections to render or be removed. This project was completed as part of The Odin Project's Full Stack Javascript curriculum.
+> A React app that helps a user build a printable resume from a template. Uses the uniqid library to allow bullet point items and resume sections to render or be removed.
 
 Live demo [_here_](https://cynthem.github.io/CV-app/)
 
